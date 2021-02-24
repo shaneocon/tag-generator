@@ -1,25 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import PrivateRoute from "./components/PrivateRoute";
+import LoginPage from "./pages/LoginPage";
+import ProtectedPage from "./pages/ProtectedPage";
+import PublicPage from "./pages/PublicPage";
+import SignUpPage from "./pages/SignUpPage";
+import UserProfilePage from "./pages/UserProfilePage";
+import { ProvideAuth } from "./util/authContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ProvideAuth>
+      <Router>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            margin: "0 auto",
+            maxWidth: "50rem"
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Navbar />
+
+          <Switch>
+            <Route path="/public">
+              <PublicPage />
+            </Route>
+            <Route path="/login">
+              <LoginPage />
+            </Route>
+            <Route path="/signup">
+              <SignUpPage />
+            </Route>
+            <PrivateRoute path="/protected">
+              <ProtectedPage />
+            </PrivateRoute>
+            <PrivateRoute path="/profile">
+              <UserProfilePage />
+            </PrivateRoute>
+          </Switch>
+        </div>
+      </Router>
+    </ProvideAuth>
   );
 }
 
