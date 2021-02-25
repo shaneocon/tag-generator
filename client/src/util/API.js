@@ -1,4 +1,6 @@
 import axios from "axios";
+const URL = ""
+
 const API = {
   // Gets a single user by id
   getUser: () => {
@@ -12,6 +14,10 @@ const API = {
       password
     });
   }
+  // getPreferences: () => {
+  //   return axios.get("")
+  // }
 };
+
 
 export default API;

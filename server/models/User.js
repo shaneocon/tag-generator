@@ -3,11 +3,6 @@ const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt-nodejs");
 
 const UserSchema = new Schema({
-  username: {
-    type: String,
-    required: true,
-    trim: true
-  },
   email: {
     type: String,
     required: true,
@@ -27,6 +22,7 @@ const UserSchema = new Schema({
     // https://mongoosejs.com/docs/api.html#schematype_SchemaType-select)
     select: false
   },
+  
   createdAt: {
     type: Date,
     default: Date.now
