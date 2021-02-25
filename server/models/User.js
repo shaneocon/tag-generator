@@ -3,11 +3,6 @@ const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt-nodejs");
 
 const UserSchema = new Schema({
-  username: {
-    type: String,
-    required: true,
-    trim: true
-  },
   email: {
     type: String,
     required: true,
@@ -30,7 +25,26 @@ const UserSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
+  },
+  preferences: {
+    materializeCSS: {
+      type: Boolean,
+      default: false
+    },
+    jQuery: {
+      type: Boolean,
+      default: false
+    },
+    boostrapCSS: {
+      type: Boolean,
+      default: false
+    },
+    fontAwesome: {
+      type: Boolean,
+      default: false
+    }
   }
+
 });
 
 // Execute before each user.save() call

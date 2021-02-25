@@ -33,4 +33,8 @@ apiRouter.get("/api/user", isAuthenticated, (req, res) => {
     .catch((err) => res.status(400).send(err));
 });
 
+apiRouter.put("/api/user/preferences", (req, res) => {
+  //
+})
+
 module.exports = apiRouter;
