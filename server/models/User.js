@@ -27,6 +27,7 @@ const UserSchema = new Schema({
     // https://mongoosejs.com/docs/api.html#schematype_SchemaType-select)
     select: false
   },
+  
   createdAt: {
     type: Date,
     default: Date.now
