@@ -35,7 +35,7 @@ function Navbar() {
 
 return (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/home-page">
           Tag Generator
         </Link>
         <button
@@ -51,7 +51,7 @@ return (
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <Link className="nav-item nav-link active" to="/">
+            <Link className="nav-item nav-link active" to="/home-page">
               Home <span className="sr-only">(current)</span>
             </Link>
             <Link className="nav-item nav-link" to="/signup">

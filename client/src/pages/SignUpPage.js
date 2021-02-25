@@ -5,7 +5,6 @@ import API from "../util/API";
 
 function SignUpPage() {
   const [formState, setFormState] = useState({
-    username: "",
     email: "",
     password: ""
   });
@@ -37,16 +36,6 @@ function SignUpPage() {
     <div>
       <h1>Sign Up</h1>
       <form onSubmit={handleSignUpFormSubmit}>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          value={formState.username}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
         <label htmlFor="email">Email:</label>
         <input
           type="email"
