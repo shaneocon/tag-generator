@@ -26,7 +26,26 @@ const UserSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
+  },
+  preferences: {
+    materializeCSS: {
+      type: Boolean,
+      default: false
+    },
+    jQuery: {
+      type: Boolean,
+      default: false
+    },
+    boostrapCSS: {
+      type: Boolean,
+      default: false
+    },
+    fontAwesome: {
+      type: Boolean,
+      default: false
+    }
   }
+
 });
 
 // Execute before each user.save() call
