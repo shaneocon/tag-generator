@@ -2,11 +2,12 @@ import { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { useAuth } from "../util/authContext";
 
+
 function LoginPage() {
   let auth = useAuth();
   const [formState, setFormState] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
   const handleInputChange = (event) => {
@@ -26,6 +27,7 @@ function LoginPage() {
 
   return (
     <div>
+      
       <h1>Login</h1>
       <form onSubmit={login}>
         <label htmlFor="email">Email:</label>
