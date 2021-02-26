@@ -19,6 +19,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "if-env": "^1.0.4"
   },
   "devDependencies": {
