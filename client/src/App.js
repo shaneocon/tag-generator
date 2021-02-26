@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import PrivateRoute from "./components/PrivateRoute";
 import LoginPage from "./pages/LoginPage";
 import ProtectedPage from "./pages/ProtectedPage";
@@ -8,8 +9,11 @@ import SignUpPage from "./pages/SignUpPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import { ProvideAuth } from "./util/authContext";
 
+
 function App() {
+  
   return (
+    
     <ProvideAuth>
       <Router>
         <div
@@ -39,6 +43,8 @@ function App() {
               <UserProfilePage />
             </PrivateRoute>
           </Switch>
+
+          <Footer />
         </div>
       </Router>
     </ProvideAuth>
