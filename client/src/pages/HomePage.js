@@ -1,6 +1,8 @@
 import cdnAPI from "../util/cdnjs";
+import React, { useState } from "react";
 
 function HomePage() {
+  const [chcekedItems, setCheckedItems] = useState({});
   function handleClick() {
     cdnAPI
       .multiple({
