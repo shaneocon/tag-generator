@@ -36,7 +36,7 @@ const UserSchema = new Schema({
       type: Boolean,
       default: false
     },
-    boostrapCSS: {
+    bootstrapCSS: {
       type: Boolean,
       default: false
     },
