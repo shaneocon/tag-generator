@@ -8,8 +8,11 @@ import SignUpPage from "./pages/SignUpPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import { ProvideAuth } from "./util/authContext";
 
+
 function App() {
+  
   return (
+    
     <ProvideAuth>
       <Router>
         <div
