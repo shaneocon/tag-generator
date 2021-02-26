@@ -33,8 +33,8 @@ apiRouter.get("/api/user", isAuthenticated, (req, res) => {
     .catch((err) => res.status(400).send(err));
 });
 
-apiRouter.put("/api/user/preferences", (req, res) => {
-  db.User.updateOne({ id: req.user.id }, { preferences: req.body})
+apiRouter.put("/api/user/preferences", isAuthenticated, (req, res) => {
+  db.User.updateOne({ id: req.user.id }, { preferences: req.body })
     .then((data) => {
       res.json(data);
     });
