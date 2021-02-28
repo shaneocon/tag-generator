@@ -1,15 +1,24 @@
 import cdnAPI from "../util/cdnjs";
 import Checkbox from "../components/Checkbox"
 import React, { useState, useEffect } from "react";
+import CardResult from "../components/Card";
 
 function HomePage() {
+  const [displayItems, setDisplayItems] = useState([]);
+
+  const [requestedItems, setRequestedItems] = useState({});
   const [checkedItems, setCheckedItems] = useState({});
   const handleChange = (event) => {
-    setCheckedItems({...checkedItems, [event.target.name] : event.target.checked });
+      setCheckedItems({...checkedItems, [event.target.name] : event.target.checked });
   } 
   useEffect(() => {
     console.log("checkedItems: ", checkedItems);
   }, [checkedItems]);
+  useEffect(() => {
+    display();
+    console.log(requestedItems)
+  }, [requestedItems]);
+
 
   const preferencesChecked = [
     {
@@ -37,27 +46,49 @@ function HomePage() {
   function handleClick() {
     cdnAPI
       .multiple({
-        jQuery: true,
-        materializeCSS: true,
-        bootstrapCSS: true,
-        fontAwesome: true,
+        jQuery: {requestedItems}, //need to change all true values to be determined by user input
+        materializeCSS: {requestedItems},
+        bootstrapCSS: {requestedItems},
+        fontAwesome: {requestedItems},
       })
       .then((requests) => {
         console.log(requests);
+        setRequestedItems(requests);
+        setDisplayItems(requestedItems)
+        console.log(requestedItems);
+      
       });
   }
 
+  function display() {
+    if (checkedItems === true) {
+      const newItemArray = [...requestedItems];
+      const filterItem = newItemArray.filter((requestedItems) => displayItems.push(requestedItems));
+      console.log(filterItem);
+    console.log("Filter Item" + filterItem);
+    }
+    
+  }
+  console.log(display);
+  
+
   return (
     <div>
-    <label>Framework Preference : {checkedItems["check-box-1"]} </label> <br/>
+    <label>Framework Preference : {checkedItems["jQuery"]} </label> <br/>
     {
         preferencesChecked.map(item => (
             <label key={item.key}>
                 {item.name}
                 <Checkbox name={item.name} checked={checkedItems[item.name]} onChange={handleChange} onClick={handleClick} />
+                <CardResult />
             </label>
+            
         ))
+        
     }
+    
+      
+    
 </div>
   );
 }

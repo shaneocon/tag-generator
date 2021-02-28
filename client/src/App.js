@@ -6,8 +6,12 @@ import LoginPage from "./pages/LoginPage";
 import ProtectedPage from "./pages/ProtectedPage";
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
+
+// import CardResult from "./components/Card";
+
 import UserProfilePage from "./pages/UserProfilePage";
 import { ProvideAuth } from "./util/authContext";
+
 
 
 function App() {
