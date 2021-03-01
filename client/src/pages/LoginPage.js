@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { useAuth } from "../util/authContext";
 
-
 function LoginPage() {
   let auth = useAuth();
   const [formState, setFormState] = useState({
@@ -27,8 +26,8 @@ function LoginPage() {
 
   return (
     <div className="text-center mt-5">
-      
       <h1>Login</h1>
+      <br />
       <form onSubmit={login}>
         <label htmlFor="email">Email:</label>
         <input
@@ -40,6 +39,7 @@ function LoginPage() {
           required
         />
         <br />
+        <br />
         <label htmlFor="password">Password:</label>
         <input
           type="password"
@@ -50,10 +50,12 @@ function LoginPage() {
           required
         />
         <br />
-        <button type="submit" onClick={login}>
+        <br />
+        <button type="submit" onClick={login} style={{ backgroundColor: "rgb(27, 134, 221)" }}>
           Log in
         </button>
       </form>
+      <br />
       <p>
         Don't have an account yet? <Link to="/signup">Sign Up</Link>
       </p>

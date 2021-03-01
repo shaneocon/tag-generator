@@ -35,6 +35,7 @@ function SignUpPage() {
   return (
     <div className="text-center mt-5">
       <h1>Sign Up</h1>
+      <br />
       <form onSubmit={handleSignUpFormSubmit}>
         <label htmlFor="email">Email:</label>
         <input
@@ -46,6 +47,7 @@ function SignUpPage() {
           required
         />
         <br />
+        <br />
         <label htmlFor="password">Password:</label>
         <input
           type="password"
@@ -56,7 +58,8 @@ function SignUpPage() {
           required
         />
         <br />
-        <button type="submit">Submit</button>
+        <br />
+        <button type="submit" style={{ backgroundColor: "rgb(27, 134, 221)"}}>Submit</button>
       </form>
     </div>
   );
