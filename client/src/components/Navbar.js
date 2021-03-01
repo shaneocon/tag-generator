@@ -34,8 +34,8 @@ function Navbar() {
 
 
 return (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/home-page">
+  <nav className="navbar navbar-expand-lg navbar-light bg-danger">
+        <Link className="navbar-brand" to="/">
           Tag Generator
         </Link>
         <button

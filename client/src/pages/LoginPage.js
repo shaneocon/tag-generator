@@ -26,7 +26,7 @@ function LoginPage() {
   }
 
   return (
-    <div>
+    <div className="text-center mt-5">
       
       <h1>Login</h1>
       <form onSubmit={login}>

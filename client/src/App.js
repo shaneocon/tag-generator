@@ -16,6 +16,8 @@ function App() {
     
     <ProvideAuth>
       <Router>
+      <Navbar />
+      
         <div
           style={{
             display: "flex",
@@ -24,9 +26,7 @@ function App() {
             maxWidth: "50rem"
           }}
         >
-          <Navbar />
-
-          <Switch>
+           <Switch>
             <Route path="/home-page">
               <HomePage />
             </Route>

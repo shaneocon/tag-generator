@@ -33,7 +33,7 @@ function SignUpPage() {
   }
 
   return (
-    <div>
+    <div className="text-center mt-5">
       <h1>Sign Up</h1>
       <form onSubmit={handleSignUpFormSubmit}>
         <label htmlFor="email">Email:</label>
