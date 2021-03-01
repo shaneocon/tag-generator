@@ -1,6 +1,7 @@
 import { useAuth } from "../util/authContext";
 import API from "../util/API";
 import { useEffect, useState } from "react";
+import HtmlGen from "../components/HtmlGen";
 
 // This component provides an example of requesting additional user info that
 // isn't available from the auth token. This page should only be rendered from
@@ -17,6 +18,7 @@ function UserProfilePage() {
 
   return (
     <div>
+      <HtmlGen />
       <h1>User Profile Example Page</h1>
       <p>Id: {user?._id}</p>
       <p>Username: {user?.username}</p>

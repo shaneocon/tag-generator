@@ -8,12 +8,13 @@ import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import { ProvideAuth } from "./util/authContext";
+import HtmlGen from "./components/HtmlGen";
 
 
 function App() {
-  
+
   return (
-    
+
     <ProvideAuth>
       <Router>
         <div
