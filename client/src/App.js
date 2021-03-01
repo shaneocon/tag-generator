@@ -9,23 +9,20 @@ import SignUpPage from "./pages/SignUpPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import { ProvideAuth } from "./util/authContext";
 
-
 function App() {
-  
   return (
-    
     <ProvideAuth>
       <Router>
+        <Navbar />
+
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             margin: "0 auto",
-            maxWidth: "50rem"
+            maxWidth: "50rem",
           }}
         >
-          <Navbar />
-
           <Switch>
             <Route path="/home-page">
               <HomePage />
