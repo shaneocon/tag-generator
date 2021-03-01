@@ -14,10 +14,11 @@ function HomePage() {
   useEffect(() => {
     console.log("checkedItems: ", checkedItems);
   }, [checkedItems]);
+
   useEffect(() => {
     display();
     console.log(requestedItems)
-  }, [requestedItems]);
+  }, [display, requestedItems]);
 
 
   const preferencesChecked = [
@@ -54,7 +55,7 @@ function HomePage() {
       .then((requests) => {
         console.log(requests);
         setRequestedItems(requests);
-        setDisplayItems(requestedItems)
+        setDisplayItems(requestedItems);
         console.log(requestedItems);
       
       });
@@ -64,7 +65,7 @@ function HomePage() {
     if (checkedItems === true) {
       const newItemArray = [...requestedItems];
       const filterItem = newItemArray.filter((requestedItems) => displayItems.push(requestedItems));
-      console.log(filterItem);
+      // console.log(filterItem);
     console.log("Filter Item" + filterItem);
     }
     
