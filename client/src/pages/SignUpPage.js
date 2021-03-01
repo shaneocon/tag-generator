@@ -6,7 +6,7 @@ import API from "../util/API";
 function SignUpPage() {
   const [formState, setFormState] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
   const auth = useAuth();
@@ -59,7 +59,9 @@ function SignUpPage() {
         />
         <br />
         <br />
-        <button type="submit" style={{ backgroundColor: "rgb(27, 134, 221)"}}>Submit</button>
+        <button type="submit" style={{ backgroundColor: "rgb(27, 134, 221)" }}>
+          Submit
+        </button>
       </form>
     </div>
   );

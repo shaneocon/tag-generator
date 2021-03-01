@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
         <section id="footer">
       <div className="row">
         <div className="col">
-        <p style={{ color: "white" }}>Guled, Shane & Travis</p>
+        <p style={{ color: "white" }}>Guled ~ Shane ~ Travis</p>
         </div>
       </div>
       <Link to="/login" className="nav-item nav-link">Login</Link>

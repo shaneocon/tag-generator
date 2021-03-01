@@ -51,7 +51,11 @@ function LoginPage() {
         />
         <br />
         <br />
-        <button type="submit" onClick={login} style={{ backgroundColor: "rgb(27, 134, 221)" }}>
+        <button
+          type="submit"
+          onClick={login}
+          style={{ backgroundColor: "rgb(27, 134, 221)" }}
+        >
           Log in
         </button>
       </form>
