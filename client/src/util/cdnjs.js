@@ -36,7 +36,21 @@ const cdnAPI = {
 //       obj[key] = ;
 //  }
     // } );
-  }
+  },
+
+  fetchJQuery() {
+    return axios.get(jQuery).then(res => res.data.latest);
+  },
+  fetchMatCSS() {
+    return axios.get(matCSS).then(res => res.data.latest);
+  }, 
+  fetchBootstrap() {
+    return axios.get(bootstrap).then(res => res.data.latest);
+  }, 
+  fetchFontAwesome() {
+    return axios.get(fontAwesome).then(res => res.data.latest);
+  }, 
+  
 };
 
 export default cdnAPI;
