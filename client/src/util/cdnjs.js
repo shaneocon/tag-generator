@@ -1,16 +1,12 @@
 import axios from "axios";
 import { keys, zipObject, values } from "lodash";
-
 const asyncAllValues = async (object) => {
   return zipObject(keys(object), await Promise.all(values(object)))
 }
-
 let jQuery = "https://api.cdnjs.com/libraries/jquery?fields=latest";
 let matCSS = "https://api.cdnjs.com/libraries/materialize?fields=latest";
 let bootstrap = "https://api.cdnjs.com/libraries/twitter-bootstrap?fields=latest";
 let fontAwesome = "https://api.cdnjs.com/libraries/font-awesome?fields=latest";
-
-
 const cdnAPI = {
   multiple: function (preferences) {
     const requests = {};
@@ -31,15 +27,22 @@ const cdnAPI = {
     // }).then(responses => {
     //   console.log(responses);
     //   const obj = {};
-
 //  for (const key of responses) {
 //       obj[key] = ;
 //  }
     // } );
-  }
+  },
+  fetchJQuery() {
+    return axios.get(jQuery).then(res => res.data.latest);
+  },
+  fetchMatCSS() {
+    return axios.get(matCSS).then(res => res.data.latest);
+  }, 
+  fetchBootstrap() {
+    return axios.get(bootstrap).then(res => res.data.latest);
+  }, 
+  fetchFontAwesome() {
+    return axios.get(fontAwesome).then(res => res.data.latest);
+  }, 
 };
-
 export default cdnAPI;
-
-
-
