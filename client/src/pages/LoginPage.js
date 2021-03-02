@@ -20,8 +20,8 @@ function LoginPage() {
   };
 
   if (auth.isLoggedIn) {
-    // redirect to /protected if user is logged in
-    return <Redirect to="/protected" />;
+    // redirect to /user-profile if user is logged in
+    return <Redirect to="/user-profile" />;
   }
 
   return (
