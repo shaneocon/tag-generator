@@ -102,10 +102,11 @@ function HomePage() {
   // }, []);
 
   return (
-    <div>
-      <label>Choose from the frameworks below to add to your page! </label>{" "}
+    <div style={{backgroundColor: "lightblue"}} className="text-center mt-5">
+      <label>STYLING FRAMEWORKS </label>{" "}
+      <h2>Choose a Framework to Add!</h2>
       <br />
-      <label>
+      <label style = {{marginRight: 20}}>
         jQuery
         <Checkbox
           name="jQuery"
@@ -113,7 +114,7 @@ function HomePage() {
           onChange={(event) => setJQueryChecked(event.target.checked)}
         />
       </label>
-      <label>
+      <label style = {{marginRight: 20}}>
         materializeCSS
         <Checkbox
           name="materializeCSS"
@@ -121,8 +122,8 @@ function HomePage() {
           onChange={(event) => setMatCSSChecked(event.target.checked)}
         />
       </label>
-      <label>
-        Bootstrap
+      <label style = {{marginRight: 20}}>
+        Bootstrap 
         <Checkbox
           name="bootstrap"
           checked={bootstrapChecked}
@@ -130,7 +131,7 @@ function HomePage() {
         />
       </label>
       <label>
-        Font Awesome
+        Font Awesome 
         <Checkbox
           name="fontAwesome"
           checked={fontAwesomeChecked}
