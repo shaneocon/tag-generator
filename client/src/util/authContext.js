@@ -47,7 +47,7 @@ function useProvideAuth() {
     user,
     error,
     login,
-    logout
+    logout,
   };
 }
 
@@ -57,18 +57,11 @@ const authContext = createContext({
   user: null,
   error: null,
   login: () => {},
-  logout: () => {}
+  logout: () => {},
 });
 
 function ProvideAuth({ children }) {
   const auth = useProvideAuth();
-
-  // initialize axios auth headers when ProvideAuth is rendered for the first
-  // time
-  useEffect(() => {
-    initAxiosAuth();
-  }, []);
-
   return <authContext.Provider value={auth} children={children} />;
 }
 
@@ -76,4 +69,4 @@ function useAuth() {
   return useContext(authContext);
 }
 
-export { ProvideAuth, useAuth };
+export { ProvideAuth, useAuth, initAxiosAuth };
