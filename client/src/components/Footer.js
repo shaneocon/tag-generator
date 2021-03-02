@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
       bottom: 0,
       height: "60px",
       width: "100%", 
-      display: "block",       
+      display: "inline",       
       }}>
         <section id="footer">
       <div className="row">
