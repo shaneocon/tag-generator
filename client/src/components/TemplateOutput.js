@@ -6,7 +6,7 @@ const textboxStyle= {
   }
 
 function TemplateOutput({ templateOptions }) {
-    return <textarea style={textboxStyle} value={buildTemplate(templateOptions)}></textarea>
+    return <textarea readOnly style={textboxStyle} value={buildTemplate(templateOptions)}></textarea>
 }
 
 export default TemplateOutput;

@@ -44,5 +44,6 @@ const cdnAPI = {
   fetchFontAwesome() {
     return axios.get(fontAwesome).then(res => res.data.latest);
   }, 
+  
 };
 export default cdnAPI;
