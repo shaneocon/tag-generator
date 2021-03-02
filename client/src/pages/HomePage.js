@@ -63,7 +63,7 @@ function HomePage() {
     }
   }, [fontAwesomeChecked]);
 
-  function handleSavePreferences(event) {
+  function handleSavePreferences() {
     API.savePreferences(preferences).catch((err) => {
       console.log(err);
     });
