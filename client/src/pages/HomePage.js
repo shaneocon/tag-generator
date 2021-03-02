@@ -23,14 +23,13 @@ function HomePage() {
 
   const [fontAwesomeChecked, setFontAwesomeChecked] = useState(false);
   const [fontAwesomeURL, setFontAwesomeURL] = useState("");
-  
+
   const preferences = {
-  materializeCSS: matCSSChecked,
-  jQuery: jQueryChecked,
-  bootstrapCSS: bootstrapChecked,
-  fontAwesome: fontAwesomeChecked
-}
-  
+    jQuery: jQueryChecked,
+    materializeCSS: matCSSChecked,
+    bootstrapCSS: bootstrapChecked,
+    fontAwesome: fontAwesomeChecked,
+  };
 
   useEffect(() => {
     if (jQueryChecked) {
@@ -65,21 +64,42 @@ function HomePage() {
   }, [fontAwesomeChecked]);
 
   function handleSavePreferences(event) {
-  API.savePreferences(preferences).catch((err)=> {
-    console.log(err);
-  })
+    API.savePreferences(preferences).catch((err) => {
+      console.log(err);
+    });
 
-    console.log('The link was clicked.');
+    console.log("The link was clicked.");
   }
 
   useEffect(() => {
     if (auth.isLoggedIn) {
       API.getUser().then((res) => {
-        console.log(res.data)
-      })
-
-     }
+        if (res.data.preferences.jQuery === true) {
+          setJQueryChecked(true);
+        }
+        if (res.data.preferences.materializeCSS === true) {
+          setMatCSSChecked(true);
+        }
+        if (res.data.preferences.bootstrapCSS === true) {
+          setBootstrapChecked(true);
+        }
+        if (res.data.preferences.fontAwesome === true) {
+          setFontAwesomeChecked(true);
+        }
+        console.log(res.data.preferences);
+      });
+    }
   }, []);
+
+  // useEffect(() => {
+  //   if (auth.isLoggedIn) {
+  //     API.getUser().then((res) => {
+  //       setMatCSSChecked(res);
+  //       // console.log(res.data)
+  //     })
+
+  //    }
+  // }, []);
 
   return (
     <div>
@@ -117,23 +137,19 @@ function HomePage() {
           onChange={(event) => setFontAwesomeChecked(event.target.checked)}
         />
       </label>
-      
       <TemplateOutput
         templateOptions={{
-          jQuery:  jQueryChecked ? jQueryURL : "",
+          jQuery: jQueryChecked ? jQueryURL : "",
           materializeCSS: matCSSChecked ? matCSSURL : "",
           bootstrap: bootstrapChecked ? bootstrapURL : "",
-          fontAwesome: fontAwesomeChecked ? fontAwesomeURL : ""
+          fontAwesome: fontAwesomeChecked ? fontAwesomeURL : "",
         }}
       />
-
-      <PreferencesButton onClick={handleSavePreferences}/>
+      <PreferencesButton onClick={handleSavePreferences} />
     </div>
-
   );
 }
 export default HomePage;
-
 
 // ==== onClick for Preferences Button, if necessary?? ==== //
 // onClick={handleSavePreferences}
