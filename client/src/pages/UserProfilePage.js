@@ -1,12 +1,8 @@
 import { useAuth } from "../util/authContext";
 import API from "../util/API";
 import { useEffect, useState } from "react";
+import { NavLink } from 'react-router-dom'
 
-const card = {
-  textAlign: "center",
-  color: "#191970",
-
-}
 
 // This component provides an example of requesting additional user info that
 // isn't available from the auth token. This page should only be rendered from
@@ -22,7 +18,7 @@ function UserProfilePage() {
   }, [auth.isLoggedIn, auth.user.id]);
 
   return (
-    <div style={card} className="card">
+    <div style={{backgroundColor: "lightblue"}} className="text-center mt-5 pt-3 pb-3">
       <h2>User Profile</h2>
       <p>ID: {user?._id}</p>
       <p>Email: {user?.email}</p>
@@ -30,6 +26,8 @@ function UserProfilePage() {
         <h2>My Preferences</h2>
         <div>Here are your saved scripts:</div>
       </div>
+      <p/>
+      <NavLink to="/home-page"> Go Home </NavLink>
     </div>
   );
 }

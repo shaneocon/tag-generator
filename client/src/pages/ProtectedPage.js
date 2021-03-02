@@ -1,21 +1,18 @@
 import { NavLink } from 'react-router-dom'
 import { useAuth } from "../util/authContext";
 
-const card = {
-  textAlign: "center",
-  color: "#191970",
-
-}
 
 function ProtectedPage() {
   const auth = useAuth();
   return (
-    <div style={card} className="card">
+    <div style={{backgroundColor: "lightblue"}} className="text-center mt-5 pt-3 pb-3">
       <h2>Registered Account</h2>
       <p>Email: {auth.user.email}</p>
       <p>User ID: {auth.user.id}</p>
 
       <NavLink to="/user-profile"> My Account </NavLink>
+      <p/>
+      <NavLink to="/home-page"> Go Home </NavLink>
     </div>
   );
 
