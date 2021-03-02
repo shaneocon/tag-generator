@@ -34,7 +34,7 @@ apiRouter.get("/api/user", isAuthenticated, (req, res) => {
 });
 
 apiRouter.put("/api/user/preferences", isAuthenticated, (req, res) => {
-  db.User.updateOne({ id: req.user.id }, { preferences: req.body })
+  db.User.updateOne({ _id: req.user.id }, { preferences: req.body })
     .then((data) => {
       res.json(data);
     });
