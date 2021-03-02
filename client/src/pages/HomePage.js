@@ -1,10 +1,17 @@
 import cdnAPI from "../util/cdnjs";
+import API from "../util/API";
 
 import Checkbox from "../components/Checkbox";
 import TemplateOutput from "../components/TemplateOutput";
+
+import { useAuth } from "../util/authContext";
+
 import React, { useState, useEffect } from "react";
+import PreferencesButton from "../components/Button";
 
 function HomePage() {
+  let auth = useAuth();
+
   const [jQueryChecked, setJQueryChecked] = useState(false);
   const [jQueryURL, setJQueryURL] = useState("");
 
@@ -16,6 +23,13 @@ function HomePage() {
 
   const [fontAwesomeChecked, setFontAwesomeChecked] = useState(false);
   const [fontAwesomeURL, setFontAwesomeURL] = useState("");
+
+  const [preferences, setPreferences] = useState({
+    materializeCSS: false,
+    jQuery: false,
+    bootstrapCSS: false,
+    fontAwesome: false
+  });
 
   useEffect(() => {
     if (jQueryChecked) {
@@ -48,6 +62,30 @@ function HomePage() {
       });
     }
   }, [fontAwesomeChecked]);
+
+  // function handleSavePreferences(event) {
+  //   event.preventDefault();
+  //   API.postPreferences({
+  //     jQuery: preferences.jQuery,
+
+  //   }).then(() => {API.getPreferences()})
+
+  //   console.log('The link was clicked.');
+  // }
+  useEffect(() => {
+    // if (auth.isLoggedIn) {
+      API.postPreferences({
+        jQuery: preferences.jQuery,
+        materializeCSS: preferences.materializeCSS,
+        bootstrapCSS: preferences.bootstrapCSS,
+        fontAwesome: preferences.fontAwesome
+      }).then((res) => {
+        console.log("HELLO")
+        setPreferences(res);
+      })
+
+    // }
+  }, []);
 
   return (
     <div>
@@ -94,7 +132,14 @@ function HomePage() {
           fontAwesome: fontAwesomeChecked ? fontAwesomeURL : ""
         }}
       />
+
+      <PreferencesButton />
     </div>
+
   );
 }
 export default HomePage;
+
+
+// ==== onClick for Preferences Button, if necessary?? ==== //
+// onClick={handleSavePreferences}
