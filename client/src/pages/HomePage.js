@@ -68,7 +68,6 @@ function HomePage() {
   //   display();
   //   console.log(requestedItems)
   // }, [requestedItems]);
-
   const preferencesChecked = [
     {
       name: "jQuery",
@@ -91,7 +90,6 @@ function HomePage() {
       label: "Font Awesome",
     },
   ];
-
   function handleClick() {
     // cdnAPI
     //   .multiple({
@@ -182,7 +180,6 @@ function HomePage() {
     </div>
   );
 }
-
 export default HomePage;
 
 // ====== STACK OVERFLOW EXAMPLE ====== //
