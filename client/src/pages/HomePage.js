@@ -23,13 +23,14 @@ function HomePage() {
 
   const [fontAwesomeChecked, setFontAwesomeChecked] = useState(false);
   const [fontAwesomeURL, setFontAwesomeURL] = useState("");
-
-  const [preferences, setPreferences] = useState({
-    materializeCSS: false,
-    jQuery: false,
-    bootstrapCSS: false,
-    fontAwesome: false
-  });
+  
+  const preferences = {
+  materializeCSS: matCSSChecked,
+  jQuery: jQueryChecked,
+  bootstrapCSS: bootstrapChecked,
+  fontAwesome: fontAwesomeChecked
+}
+  
 
   useEffect(() => {
     if (jQueryChecked) {
@@ -63,28 +64,21 @@ function HomePage() {
     }
   }, [fontAwesomeChecked]);
 
-  // function handleSavePreferences(event) {
-  //   event.preventDefault();
-  //   API.postPreferences({
-  //     jQuery: preferences.jQuery,
+  function handleSavePreferences(event) {
+  API.savePreferences(preferences).catch((err)=> {
+    console.log(err);
+  })
 
-  //   }).then(() => {API.getPreferences()})
+    console.log('The link was clicked.');
+  }
 
-  //   console.log('The link was clicked.');
-  // }
   useEffect(() => {
-    // if (auth.isLoggedIn) {
-      API.postPreferences({
-        jQuery: preferences.jQuery,
-        materializeCSS: preferences.materializeCSS,
-        bootstrapCSS: preferences.bootstrapCSS,
-        fontAwesome: preferences.fontAwesome
-      }).then((res) => {
-        console.log("HELLO")
-        setPreferences(res);
+    if (auth.isLoggedIn) {
+      API.getUser().then((res) => {
+        console.log(res.data)
       })
 
-    // }
+     }
   }, []);
 
   return (
@@ -133,7 +127,7 @@ function HomePage() {
         }}
       />
 
-      <PreferencesButton />
+      <PreferencesButton onClick={handleSavePreferences}/>
     </div>
 
   );

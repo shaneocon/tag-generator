@@ -13,16 +13,8 @@ const API = {
       password
     });
   },
-  getPreferences: ({ materializeCSS, jQuery, bootstrapCSS, fontAwesome }) => {
-    return axios.get("/api/user/preferences", {
-      materializeCSS,
-      jQuery,
-      bootstrapCSS,
-      fontAwesome
-    });
-  },
-  postPreferences: ({ materializeCSS, jQuery, bootstrapCSS, fontAwesome }) => {
-    return axios.post("/api/user/preferences", {
+  savePreferences: ({ materializeCSS, jQuery, bootstrapCSS, fontAwesome }) => {
+    return axios.put("/api/user/preferences", {
       materializeCSS,
       jQuery,
       bootstrapCSS,

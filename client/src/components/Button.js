@@ -5,10 +5,10 @@ import Button from "react-bootstrap/Button";
 
 import { useAuth } from "../util/authContext";
 
-function PreferencesButton() {
+function PreferencesButton({ onClick }) {
   let auth = useAuth();
   if (auth.isLoggedIn) {
-    return <Button className="prefButton">Save Preferences</Button>
+    return <Button className="prefButton" onClick={onClick}>Save Preferences</Button>
     }
 
   return (
