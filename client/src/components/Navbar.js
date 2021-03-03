@@ -34,7 +34,8 @@ function Navbar() {
 
 
 return (
-  <nav className="navbar navbar-expand-lg navbar-light bg-danger">
+  <nav style={{backgroundColor: "#bbbbbbed"}}
+  className="navbar navbar-expand-lg navbar-light">
         <Link className="navbar-brand" to="/home-page">
           Tag Generator
         </Link>
@@ -62,7 +63,7 @@ return (
             </Link>}
             
         {auth.isLoggedIn ? (
-          <button type="button" onClick={signOut}>
+          <button className="pt-2 pb-2" type="button" onClick={signOut}>
             Sign Out
           </button>
         ) : (
