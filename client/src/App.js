@@ -29,7 +29,7 @@ function App() {
           }}
         >
           <Switch>
-            <Route path="/home-page">
+            <Route exact path={["/home-page","/" ]}>
               <HomePage />
             </Route>
             <Route path="/login">
