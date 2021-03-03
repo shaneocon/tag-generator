@@ -91,16 +91,6 @@ function HomePage() {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (auth.isLoggedIn) {
-  //     API.getUser().then((res) => {
-  //       setMatCSSChecked(res);
-  //       // console.log(res.data)
-  //     })
-
-  //    }
-  // }, []);
-
   return (
     <div style={{backgroundColor: "lightblue"}} className="text-center mt-5">
       <label>STYLING FRAMEWORKS </label>{" "}
@@ -153,5 +143,3 @@ function HomePage() {
 }
 export default HomePage;
 
-// ==== onClick for Preferences Button, if necessary?? ==== //
-// onClick={handleSavePreferences}
