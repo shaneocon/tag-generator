@@ -1,4 +1,4 @@
-# Tag Generator
+# Tag Generator (Final Project/Project 3)
 
 ## Description:
 
@@ -12,7 +12,7 @@ This application was designed to assist Web Developers and Software Engineers wh
 
 <br>
 
-# Contributers:
+# Authors:
 
 ### Shane O'Connell: https://github.com/shaneocon
 
@@ -28,13 +28,20 @@ This application was designed to assist Web Developers and Software Engineers wh
 
 <br>
 
-# License:
+# Technologies Used:
 
-None
+* [Mongo](www.npmjs.com/package/mongodb) - Used for Database.
+* [Express](https://www.npmjs.com/package/express) - Used for routes and handling requests.
+* [React](https://github.com/reactjs/reactjs.org) - Framework that was used.
+* [Node](https://www.npmjs.com/package/node) - Used for developing server-side and networking functionality.
+* [React-Bootstrap](https://react-bootstrap.github.io/) - Used to generate front end styling
+* [Axios](https://www.npmjs.com/package/axios) - Used for the API requests.
+* [Heroku](https://devcenter.heroku.com/categories/reference) - Used to deploy the App
+* [JWT](https://jwt.io/) - Used for Node.js Authentication
 
 <br>
 
-# Links:
+# Deployment:
 
 GitHub Repository Link: https://github.com/shaneocon/tag-generator
 
