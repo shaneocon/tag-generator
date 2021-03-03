@@ -6,25 +6,27 @@ This application allows the user to generate an HTML script that contains the us
 
 <br>
 
-# Usage:
+# User Story:
 
-This application was designed to assist Web Developers and Software Engineers who want to save time by generating an HTML containing their desired script with the click of a button.
+As a Web Developer, I want an application that will allow me to save time by generating an HTML script tag containing my desired framework scripts when I click a button. I want to be able to save my preferences in my own private account. 
 
 <br>
 
 # Installation: 
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+Start by installing Front End and Back End dependencies by running the command;
 
     - npm install
 
 This will install node modules within the server folder and the client folder.
 
+You can add as many necessary dependencies and libraries to your project by running npm [library name and/or program].
+
 Once the installations are completed, the user can run the following command;
 
     - npm start
 
-The application will deploy on the user's localhost 3000 or 3001 port. 
+The application will deploy on the user's localhost 3000 or 3001 port, depending on what port the user has selected to deploy the application. 
 
 <br>
 
