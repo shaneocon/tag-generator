@@ -12,6 +12,14 @@ This application was designed to assist Web Developers and Software Engineers wh
 
 <br>
 
+# Installation: 
+
+Start by installing front and backend dependencies. While in this directory, run the following command:
+
+    - npm install
+
+adasdad
+
 # Authors:
 
 ### Shane O'Connell: https://github.com/shaneocon
