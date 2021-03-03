@@ -13,48 +13,6 @@ function NavbarFunc() {
  
 
 return (
-  // <nav className="navbar navbar-expand-lg navbar-light bg-danger">
-  //       <Link className="navbar-brand" to="/home-page">
-  //         Tag Generator
-  //       </Link>
-  //       <button
-  //         className="navbar-toggler"
-  //         type="button"
-  //         data-toggle="collapse"
-  //         data-target="#navbarNavAltMarkup"
-  //         aria-controls="navbarNavAltMarkup"
-  //         aria-expanded="false"
-  //         aria-label="Toggle navigation"
-  //       >
-  //         <span className="navbar-toggler-icon"></span>
-  //       </button>
-  //       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-  //         <div className="navbar-nav">
-  //           <Link className="nav-item nav-link active" to="/home-page">
-  //             Home <span className="sr-only">(current)</span>
-  //           </Link>
-  //           <Link className="nav-item nav-link" to="/signup">
-  //             Register
-  //           </Link>
-  //           {auth.isLoggedIn && <Link className="nav-item nav-link" to="/user-profile">
-  //             Account
-  //           </Link>}
-            
-  //       {auth.isLoggedIn ? (
-  //         <button type="button" onClick={signOut}>
-  //           Sign Out
-  //         </button>
-  //       ) : (
-  //         <Link to="/login" className="nav-item nav-link">Login</Link>
-  //       )}
-      
-  //         </div>
-  //       </div>
-  //     </nav>
-
-
-
-
 <Fragment>
     <Navbar sticky="top" bg="#bbbbbbed" expand="lg" >
       <Navbar.Brand as= {Link} to="/home-page">Tag Generator</Navbar.Brand>
@@ -86,9 +44,6 @@ return (
     </Navbar.Collapse>
   </Navbar>
 </Fragment >
-
-
-
   );
 }
 
