@@ -35,22 +35,6 @@ function NavbarFunc() {
               </Nav.Link>
             )}
 
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/user-profile">
-                Account
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/login">
-                Login
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/signup">
-                Sign Up
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/protected">
-                protected
-              </NavDropdown.Item>
-            </NavDropdown>
-
             {auth.isLoggedIn ? (
               <button type="button" as={Link} onClick={signOut}>
                 Sign Out
