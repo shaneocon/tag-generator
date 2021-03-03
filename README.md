@@ -18,7 +18,15 @@ Start by installing front and backend dependencies. While in this directory, run
 
     - npm install
 
-adasdad
+This will install node modules within the server folder and the client folder.
+
+Once the installations are completed, the user can run the following command;
+
+    - npm start
+
+The application will deploy on the user's localhost 3000 or 3001 port. 
+
+<br>
 
 # Authors:
 
