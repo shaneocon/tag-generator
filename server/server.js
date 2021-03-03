@@ -50,6 +50,6 @@ app.get("*", function (req, res) {
   res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
 });
 
-app.listen(process.env.PORT || 3000, function () {
+app.listen(PORT, function () {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
