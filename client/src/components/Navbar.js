@@ -12,7 +12,7 @@ function NavbarFunc() {
 
   return (
     <Fragment>
-      <Navbar sticky="top" variant="dark" bg="rgba(187, 187, 187, .93);" expand="lg">
+      <Navbar style={{backgroundColor: `rgba(${187}, ${187}, ${187}, ${.93})`}} sticky="top" className="bg-" expand="lg">
         <Navbar.Brand as={Link} to="/home-page">
           Tag Generator
         </Navbar.Brand>
