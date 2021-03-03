@@ -45,7 +45,7 @@ function App() {
               <UserProfilePage />
             </PrivateRoute>
           </Switch>
-
+          
           <Footer />
         </div>
       </Router>
