@@ -28,10 +28,4 @@ export default PreferencesButton;
 
 
 
-    // return (
-    //   <div>
-    //   <Link to='https://react.semantic-ui.com/'>
-    //   <button type="button" className="btn btn-info">Button</button>
-    //   </Link>
-    //   </div>
-    // );
+   

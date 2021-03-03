@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { useAuth } from "../util/authContext";
 import API from "../util/API";
-// import img from './tagrobot.jpg'
 
 function SignUpPage() {
   const [formState, setFormState] = useState({
@@ -33,9 +32,11 @@ function SignUpPage() {
     return <Redirect to="/protected" />;
   }
 
-  
   return (
-    <div style={{backgroundColor: "#bbbbbbed"}} className="text-center mt-5 pt-3 pb-3">
+    <div
+      style={{ backgroundColor: "#bbbbbbed" }}
+      className="text-center mt-5 pt-3 pb-3"
+    >
       <h1>Sign Up</h1>
       <br />
       <form onSubmit={handleSignUpFormSubmit}>

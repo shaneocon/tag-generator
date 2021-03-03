@@ -23,14 +23,6 @@ const cdnAPI = {
       requests.fontAwesome = axios.get(fontAwesome).then(res => res.data.latest);
     }
     return asyncAllValues(requests);
-    //   return requests;
-    // }).then(responses => {
-    //   console.log(responses);
-    //   const obj = {};
-//  for (const key of responses) {
-//       obj[key] = ;
-//  }
-    // } );
   },
   fetchJQuery() {
     return axios.get(jQuery).then(res => res.data.latest);
