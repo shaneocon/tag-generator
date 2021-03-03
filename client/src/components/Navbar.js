@@ -62,7 +62,7 @@ return (
             </Link>}
             
         {auth.isLoggedIn ? (
-          <button type="button" onClick={signOut}>
+          <button className="pt-2 pb-2" type="button" onClick={signOut}>
             Sign Out
           </button>
         ) : (

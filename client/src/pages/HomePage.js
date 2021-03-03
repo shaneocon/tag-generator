@@ -6,8 +6,11 @@ import TemplateOutput from "../components/TemplateOutput";
 
 import { useAuth } from "../util/authContext";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import PreferencesButton from "../components/Button";
+
+
+
 
 function HomePage() {
   let auth = useAuth();
@@ -91,6 +94,25 @@ function HomePage() {
     }
   }, []);
 
+
+  function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+  }
+  
+  function ShowWindowDimensions(props) {
+    const [width, height] = useWindowSize();
+    return <span>Window size: {width} x {height}</span>;
+  }
+
   // useEffect(() => {
   //   if (auth.isLoggedIn) {
   //     API.getUser().then((res) => {
@@ -102,11 +124,11 @@ function HomePage() {
   // }, []);
 
   return (
-    <div style={{backgroundColor: "lightblue"}} className="text-center mt-5">
+    <div style={{ backgroundColor: "#add8e6d1" }} className="text-center mt-5">
       <label>STYLING FRAMEWORKS </label>{" "}
       <h2>Choose a Framework to Add!</h2>
       <br />
-      <label style = {{marginRight: 20}}>
+      <label style = {{marginRight: 20 }}>
         jQuery
         <Checkbox
           name="jQuery"
@@ -114,7 +136,7 @@ function HomePage() {
           onChange={(event) => setJQueryChecked(event.target.checked)}
         />
       </label>
-      <label style = {{marginRight: 20}}>
+      <label style = {{marginRight: 20 }}>
         materializeCSS
         <Checkbox
           name="materializeCSS"
@@ -122,7 +144,7 @@ function HomePage() {
           onChange={(event) => setMatCSSChecked(event.target.checked)}
         />
       </label>
-      <label style = {{marginRight: 20}}>
+      <label style = {{marginRight: 20 }}>
         Bootstrap 
         <Checkbox
           name="bootstrap"
@@ -138,7 +160,7 @@ function HomePage() {
           onChange={(event) => setFontAwesomeChecked(event.target.checked)}
         />
       </label>
-      <TemplateOutput
+      <TemplateOutput 
         templateOptions={{
           jQuery: jQueryChecked ? jQueryURL : "",
           materializeCSS: matCSSChecked ? matCSSURL : "",
@@ -146,7 +168,9 @@ function HomePage() {
           fontAwesome: fontAwesomeChecked ? fontAwesomeURL : "",
         }}
       />
-      <PreferencesButton onClick={handleSavePreferences} />
+      <br/>
+      <PreferencesButton style = {{marginBottom: 20 }}
+      onClick={handleSavePreferences} />
     </div>
   );
 }
