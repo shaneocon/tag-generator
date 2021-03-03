@@ -21,11 +21,11 @@ function LoginPage() {
 
   if (auth.isLoggedIn) {
     // redirect to /protected if user is logged in
-    return <Redirect to="/protected" />;
+    return <Redirect to="/home-page" />;
   }
 
   return (
-    <div style={{backgroundColor: "#bbbbbbed"}} className="text-center mt-5 pt-3 pb-3">
+    <div style={{backgroundColor: "#ff8243"}} className="text-center mt-5 pt-3 pb-3">
       <h1>Login</h1>
       <br />
       <form onSubmit={login}>

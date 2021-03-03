@@ -12,9 +12,9 @@ function NavbarFunc() {
 
   return (
     <Fragment>
-      <Navbar style={{backgroundColor: `rgba(${187}, ${187}, ${187}, ${.93})`}} sticky="top" className="bg-" expand="lg">
-        <Navbar.Brand as={Link} to="/home-page">
-          Tag Generator
+      <Navbar style={{backgroundColor: "#ff8243f2"}} sticky="top" expand="lg">
+        <Navbar.Brand id="tag" as={Link} to="/home-page">
+        <img src="https://fontmeme.com/permalink/210303/bbbe5546682f1ec9267b8854759e16fd.png" alt="tag-generator" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -35,16 +35,6 @@ function NavbarFunc() {
               </Nav.Link>
             )}
 
-            {auth.isLoggedIn ? (
-              <button type="button" as={Link} onClick={signOut}>
-                Sign Out
-              </button>
-            ) : (
-              <Nav.Link as={Link} to="/login" className="nav-item nav-link">
-                Login
-              </Nav.Link>
-            )}
-
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/user-profile">
                 Account
@@ -60,6 +50,16 @@ function NavbarFunc() {
                 protected
               </NavDropdown.Item>
             </NavDropdown>
+
+            {auth.isLoggedIn ? (
+              <button type="button" as={Link} onClick={signOut}>
+                Sign Out
+              </button>
+            ) : (
+              <Nav.Link as={Link} to="/login" className="nav-item nav-link">
+                Login
+              </Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
