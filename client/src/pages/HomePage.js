@@ -92,7 +92,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#bbbbbbed" }} className="text-center mt-5">
+    <div style={{ backgroundColor: "#ff8243f2" }} className="text-center mt-5">
       <label>STYLING FRAMEWORKS </label> <h2>Choose a Framework to Add!</h2>
       <br />
       <label style={{ marginRight: 20 }}>

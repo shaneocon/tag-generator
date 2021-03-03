@@ -18,7 +18,7 @@ function UserProfilePage() {
   }, [auth.isLoggedIn, auth.user.id]);
 
   return (
-    <div style={{backgroundColor: "#bbbbbbed"}} className="text-center mt-5 pt-3 pb-3">
+    <div style={{backgroundColor: "#ff8243"}} className="text-center mt-5 pt-3 pb-3">
       <h2>User Profile</h2>
       <p>ID: {user?._id}</p>
       <p>Email: {user?.email}</p>

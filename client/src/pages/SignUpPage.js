@@ -34,7 +34,7 @@ function SignUpPage() {
 
   return (
     <div
-      style={{ backgroundColor: "#bbbbbbed" }}
+      style={{ backgroundColor: "##ff8243" }}
       className="text-center mt-5 pt-3 pb-3"
     >
       <h1>Sign Up</h1>
