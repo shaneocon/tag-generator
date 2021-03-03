@@ -1,9 +1,15 @@
 body {
-  background-image: url("https://fontmeme.com/permalink/210303/403ea1e65b93a4fd368c0accb1a54d4d.png");
+  background-image: url("https://fontmeme.com/permalink/210303/bf4bc149a0756b7ca8086439f8d24a71.png");
+  background-size: 100%;
   width: 100%;
   margin: 0;
   min-height: 400px;
   margin-bottom: 100px;
   clear: both;
   font-family: "Avenir Next", Calibri, Verdana, sans-serif;
+}
+#tag {
+  background-image: url("https://fontmeme.com/permalink/210303/bbbe5546682f1ec9267b8854759e16fd.png") norepeat;
+  background-size: 100%;
+  
 }
