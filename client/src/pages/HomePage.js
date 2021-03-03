@@ -146,6 +146,7 @@ function HomePage() {
           fontAwesome: fontAwesomeChecked ? fontAwesomeURL : "",
         }}
       />
+      <br />
       <PreferencesButton onClick={handleSavePreferences} />
     </div>
   );
