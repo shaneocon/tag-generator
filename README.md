@@ -22,7 +22,7 @@ This application was designed to assist Web Developers and Software Engineers wh
 
 <br>
 
-# Credit:
+# Credits:
 
 ### UCSD Trilogy Coding Bootcamp
 
@@ -30,10 +30,10 @@ This application was designed to assist Web Developers and Software Engineers wh
 
 # Technologies Used:
 
-* [Mongo](www.npmjs.com/package/mongodb) - Used for Database.
-* [Express](https://www.npmjs.com/package/express) - Used for routes and handling requests.
+* [MongoDB](www.npmjs.com/package/mongodb) - Used for Database.
+* [ExpressJS](https://www.npmjs.com/package/express) - Used for routes and handling requests.
 * [React](https://github.com/reactjs/reactjs.org) - Framework that was used.
-* [Node](https://www.npmjs.com/package/node) - Used for developing server-side and networking functionality.
+* [NodeJS](https://www.npmjs.com/package/node) - Used for developing server-side and networking functionality.
 * [React-Bootstrap](https://react-bootstrap.github.io/) - Used to generate front end styling
 * [Axios](https://www.npmjs.com/package/axios) - Used for the API requests.
 * [Heroku](https://devcenter.heroku.com/categories/reference) - Used to deploy the App
@@ -43,9 +43,9 @@ This application was designed to assist Web Developers and Software Engineers wh
 
 # Deployment:
 
-GitHub Repository Link: https://github.com/shaneocon/tag-generator
-
 Heroku Link: https://tag-generator-2021.herokuapp.com/
+
+GitHub Repository Link: https://github.com/shaneocon/tag-generator
 
 <br>
 
