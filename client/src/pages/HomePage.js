@@ -168,8 +168,8 @@ function HomePage() {
           fontAwesome: fontAwesomeChecked ? fontAwesomeURL : "",
         }}
       />
-      <PreferencesButton style = {{marginBottom: 20 }}
-      onClick={handleSavePreferences} />
+      <br />
+      <PreferencesButton onClick={handleSavePreferences} />
     </div>
   );
 }
