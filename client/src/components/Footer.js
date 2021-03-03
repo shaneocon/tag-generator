@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
     function Footer() {
     return (
-      <footer style={{backgroundColor: "rgb(61, 57, 57)",
+      <footer style={{backgroundColor: "#bbbbbbed",
       borderTop: "1px solid #E7E7E7",
       textAlign: "center",
       padding: "20px",
@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
         <section id="footer">
       <div className="row">
         <div className="col">
-        <p style={{ color: "white" }}>Guled ~ Shane ~ Travis</p>
+        <p style={{ color: "white" }}>Created By: KODE GOATS</p>
         </div>
       </div>
       <Link to="/login" className="nav-item nav-link">Login</Link>

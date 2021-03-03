@@ -124,7 +124,7 @@ function HomePage() {
   // }, []);
 
   return (
-    <div style={{ backgroundColor: "#add8e6d1" }} className="text-center mt-5">
+    <div style={{ backgroundColor: "#bbbbbbed" }} className="text-center mt-5">
       <label>STYLING FRAMEWORKS </label>{" "}
       <h2>Choose a Framework to Add!</h2>
       <br />
@@ -168,7 +168,6 @@ function HomePage() {
           fontAwesome: fontAwesomeChecked ? fontAwesomeURL : "",
         }}
       />
-      <br/>
       <PreferencesButton style = {{marginBottom: 20 }}
       onClick={handleSavePreferences} />
     </div>
