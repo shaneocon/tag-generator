@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import NavbarFunc from "./components/Navbar";
 import Footer from "./components/Footer";
 import PrivateRoute from "./components/PrivateRoute";
 import LoginPage from "./pages/LoginPage";
@@ -18,7 +18,7 @@ function App() {
   return (
     <ProvideAuth>
       <Router>
-        <Navbar />
+        <NavbarFunc />
 
         <div
           style={{
