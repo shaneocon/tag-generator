@@ -20,7 +20,7 @@ function App() {
       <Router>
         <NavbarFunc />
 
-        <div
+        <div id="mainpage"
           style={{
             display: "flex",
             flexDirection: "column",
