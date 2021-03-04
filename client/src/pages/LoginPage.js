@@ -25,7 +25,7 @@ function LoginPage() {
   }
 
   return (
-    <div style={{backgroundColor: "#ff8243"}} className="text-center mt-5 pt-3 pb-3">
+    <div style={{backgroundColor: "#ff8243f2"}} className="text-center mt-5 pt-3 pb-3">
       <h1>Login</h1>
       <br />
       <form onSubmit={login}>

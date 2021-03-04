@@ -14,14 +14,14 @@ function buildTemplate(answers) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    ${buildScriptTag(answers.jQuery)}
+    ${buildScriptTag(answers.bootstrap)}
+    ${buildScriptTag(answers.materializeCSS)}
     ${buildScriptTag(answers.fontAwesome)}
 </head>
 
 <body>
     <!-- Add your code here -->
-    ${buildScriptTag(answers.bootstrap)}
-    ${buildScriptTag(answers.materializeCSS)}
+    ${buildScriptTag(answers.jQuery)}
 </body>
 
 </html>`.trim();
