@@ -8,7 +8,7 @@ This application allows the user to generate an HTML script that contains the us
 
 # User Story:
 
-As a Web Developer, I want an application that will allow me to save time by generating an HTML script tag containing my desired framework scripts when I click a button. I want to be able to save my preferences in my own private account. 
+As a Web Developer, I want an application that will allow me to save time by generating an HTML script tag containing my desired framework scripts to us when I click a button. I want to be able to save my preferences in my account. 
 
 <br>
 
