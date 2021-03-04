@@ -69,5 +69,5 @@ GitHub Repository Link: https://github.com/shaneocon/tag-generator
 
 # Screenshot Picture of Deployed Application:
 
-<img src="./docs/project3img">
+<img src="./docs/project3img.png">
 
